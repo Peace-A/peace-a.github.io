@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Обирай життя",
   description: "Christian website",
+  base: "/chooselife/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "./icon.png",
