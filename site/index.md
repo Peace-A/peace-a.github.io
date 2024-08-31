@@ -69,12 +69,14 @@ h1 {
     text-align: center;
     font-weight: bold; /* Optional: makes the text bold */
     font-family: "Yong Serif";
+    line-height: 1;
 }
 
 h2, h3, h4 {
     font-size: 3em; /* Adjust font size as needed */
     text-align: center;
     font-weight: bold; /* Optional: makes the text bold */
+    line-height: 1;
 }
 
 h3 {
@@ -89,8 +91,8 @@ h4 {
 p {
     text-align: center;
     margin-top: 40px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-size: 1.5em;
     text-indent: 20px;
     line-height: 1.3;
@@ -107,17 +109,17 @@ blockquote {
     padding: 5px;
 }
 
+.about-us > p {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
 @media (max-width: 900px) {
     .centered-text {
         transform: scale(1.5);
     }
 } 
 
-@media (max-width: 600px) {
-    .centered-text {
-        transform: scale(1.2);
-    }
-} 
 
 .w-100 {
     width: 100%;
@@ -195,11 +197,14 @@ blockquote {
     }
 
     .card-text > h3 {
-        font-size: 4em;
+        font-size: 3em;
+        margin: 0;
     }
     
     .card-text > h3, .card-text > h4 {
         text-align: center;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -268,6 +273,10 @@ b {
     text-align: left;
 }
 
+.centered-text .title-separator {
+    display: none;
+}
+
 @media (max-width: 1500px) {
     .split {
         display: block;
@@ -280,6 +289,10 @@ b {
     .split > * {
         width: 100%;
         margin-top: 50px;
+    }
+
+    .socials > .split > img:first-child {
+        transform: scale(1);
     }
 
     .help > .split > div {
@@ -298,6 +311,59 @@ b {
         line-height: 1.5;
     }
 }
+
+@media (max-width: 600px) {
+    .centered-text {
+        transform: scale(1);
+    }
+
+    .centered-text .title-separator {
+        display: block;
+    }
+
+    .centered-text > h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+
+    .centered-text > p {
+        font-size: 2em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .about-us > p {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .socials > .split {
+        display: block;
+    }
+
+    .socials > .split > img {
+        width: 100%;
+    }
+
+    .help > .split > div:first-child {
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
+
+    .bank > p {
+        font-size: 1.3em;
+    }
+
+} 
 
 footer {
     background-color: #add8e6;
@@ -320,7 +386,7 @@ function open(link) {
 
 <div class="background-container">
     <div class="centered-text">
-        <h1>Обирай Життя</h1>
+        <h1>Обирай <br class="title-separator"> Життя</h1>
         <p>Християнський центр ресоціалізації</p>
     </div>
 </div>
