@@ -3,7 +3,22 @@
 layout: page
 ---
 
+<script setup>
+
+import Card from "./components/Card.vue"
+
+// open page in new tab
+function open(link) {
+    window.open(link, "_blank")
+}
+
+</script>
+
 <style>
+
+/* --- */
+/* restyle header of main page of website */
+
 .VPNav {
     position: absolute !important;
 }
@@ -20,48 +35,24 @@ layout: page
     display: none !important;
 }
 
-p, h1, h2, h3, h4, cite, blockquote {
-    color: #2c3e50;
-}
+/* --- */
 
+/* backgraund always white even in dark mode */
 body {
     background-color: white;
 }
 
+/* fix bug with horizontal scrolling */
 #app {
     overflow-x: hidden;
 }
 
-.banner {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
+/* --- */
+/* font styles */
 
-.background-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transform: translateY(-100px);
-    width: 100%;
-    height: 100vh; /* Adjust height as needed */
-    background-image: url('/home.jpg');
-    background-position: center;
-    background-size: cover; /* Adjust as needed */
-    background-color: rgba(255, 255, 255, 0.6); /* Overlay color with opacity */
-    background-blend-mode: lighten; /* Adjust blend mode as needed */
-}
-
-.centered-text {
-    transform: scale(2);
-}
-
-.centered-text > p {
-    font-family: M;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 1.3em;
+/* awesome color for fonts */
+p, h1, h2, h3, h4, cite, blockquote {
+    color: #2c3e50;
 }
 
 h1 {
@@ -109,17 +100,35 @@ blockquote {
     padding: 5px;
 }
 
-.about-us > p {
-    margin-right: 100px;
-    margin-left: 100px;
+b {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px;
+    line-height: 1.7;
 }
 
-@media (max-width: 900px) {
-    .centered-text {
-        transform: scale(1.5);
+@media (max-width: 1500px) {
+    cite, blockquote {
+        font-size: 2em;
+        line-height: 1.5;
     }
-} 
 
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+}
+
+/* --- */
+
+/* --- */
+/* API styles */
 
 .w-100 {
     width: 100%;
@@ -129,9 +138,129 @@ blockquote {
     color: white;
 }
 
+.split {
+    display: flex;
+}
+
+@media (max-width: 1500px) {
+    .split {
+        display: block;
+    }
+    
+    .split > * {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+/* --- */
+
+</style>
+
+<!-- Header screen -->
+
+<style>
+
+.background-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateY(-100px);
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    background-image: url('/home.jpg');
+    background-position: center;
+    background-size: cover; /* Adjust as needed */
+    background-color: rgba(255, 255, 255, 0.6); /* Overlay color with opacity */
+    background-blend-mode: lighten; /* Adjust blend mode as needed */
+}
+
+.centered-text {
+    transform: scale(2);
+}
+
+.centered-text .title-separator {
+    display: none;
+}
+
+.centered-text > p {
+    font-family: M;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+@media (max-width: 600px) {
+
+    .centered-text {
+        transform: scale(1);
+    }
+
+    .centered-text .title-separator {
+        display: block;
+    }
+
+    .centered-text > h1 {
+        font-size: 3em;
+    }
+
+    .centered-text > p {
+        font-size: 1.2em;
+        margin-left: 0;
+        margin-right: 0;
+
+        /* BUG: for some reason <p> in not in the center but some placed right so move it some left */
+        padding-right: 15px; 
+    }
+}
+
+@media (max-width: 900px) {
+    .centered-text {
+        transform: scale(1.5);
+    }
+} 
+
+</style>
+
+<div class="background-container">
+    <div class="centered-text">
+        <h1>Обирай <br class="title-separator"> Життя</h1>
+        <p>Християнський центр ресоціалізації</p>
+    </div>
+</div>
+
+<!-- About us -->
+
+<style>
+
+.about-us > p {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
 .about-us {
     margin-bottom: 100px;
 }
+
+@media (max-width: 600px) {
+    .about-us > p {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+</style>
+
+<div class="about-us">
+    <h2>Про нас</h2>
+    <p>Ми - Християни. Починаючи з 2017 року ми служимо для нарко- та алко- залежним, щоб Сам Бог - Ісус Христос звільнив від тяжких залежностей. Курс реабілітації - безкоштовний, під час якого ви зможете дізнитися про Бога і побудувати з ним відносини. Це найкраща дорога, щоб отримати свободу від наркотиків, алкоголю, тютюну і інших залежностей. В центр ресоціалізації приймаємо кожного, хто хоче стати вільним і розірвати коло залежності. Свобода може настати лише, під проявом вашого особистого рішення прийняти допомогу Бога. </p>
+</div>
+
+<!-- Ministry description -->
+
+<style>
 
 .ministry {
     position: relative;
@@ -208,9 +337,20 @@ blockquote {
     }
 }
 
-.split {
-    display: flex;
-}
+</style>
+
+<div class="ministry w-100">
+    <img class="ministry-back" src="/back-our-work.jpg">
+    <h2 class="c-w">Наше служіння</h2>
+    <Card img="/chooselife/ministry-1.jpg" title="Звістка Євангелії" decription="Наша ціль звістити Божу вістку спасіння у Ісусі Христі." />
+    <Card img="/chooselife/ministry-2.jpg" title="Допомога залежним" decription="Допомога алко-, нарко- залежним та людям з іншими залежностями." />
+    <Card img="/chooselife/ministry-3.jpg" title="Консультація рідних" decription="Допомога алко-, нарко- залежним та людям з іншими залежностями." />
+    <Card img="/chooselife/ministry-4.jpg" title="Дім милосердя" decription="Допомога літнім людям, які потрапили в складні життеві ситуації." />
+</div>
+
+<!-- Contact and Socials blocks -->
+
+<style>
 
 .contacts, .socials {
     width: 50%;
@@ -250,12 +390,49 @@ blockquote {
     transform: scale(0.8);
 }
 
-b {
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 2px;
-    line-height: 1.7;
+@media (max-width: 1500px) {
+    .socials > .split {
+        display: flex;
+    }
+
+    .socials > .split > img:first-child {
+        transform: scale(1);
+    }
+
 }
+
+@media (max-width: 600px) {
+    .socials > .split {
+        display: block;
+    }
+
+    .socials > .split > img {
+        width: 100%;
+    }
+
+}
+
+</style>
+
+<div class="split">
+    <div class="contacts">
+        <h2>Наші контакти</h2>
+        <p>Номер телефону: <b>+380969636242</b> Томін Олексій</p>
+        <p>Email: <b>life.choose2023@gmail.com</b></p>
+        <p>Адрес: <b>Україна, 62014, Харківська обл, Богодухівський р-н, село Пархомівка, вул Малиша Івана, будинок 99</b></p>
+    </div>
+    <div class="socials">
+        <h2>Ми в соціальних мережах</h2>
+        <div class="split">
+            <img src="/phone.png" @click="open('https://www.instagram.com/obyraj_zhyttya_')">
+            <img src="/laptop.png" @click="open('https://www.facebook.com/people/%D0%9E%D0%B1%D0%B8%D1%80%D0%B0%D0%B9-%D0%96%D0%B8%D1%82%D1%82%D1%8F/pfbid028MSgmNJeeZuGTibMGchTfCeqPKUeDwJ77XTocE91Z3Vsk4kYLQB33iWraWfwRprKl/')" >
+        </div>
+    </div>
+</div>
+
+<!-- Donation blocks -->
+
+<style>
 
 .help > .split > div {
     width: 50%;
@@ -273,28 +450,7 @@ b {
     text-align: left;
 }
 
-.centered-text .title-separator {
-    display: none;
-}
-
 @media (max-width: 1500px) {
-    .split {
-        display: block;
-    }
-
-    .socials > .split {
-        display: flex;
-    }
-    
-    .split > * {
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    .socials > .split > img:first-child {
-        transform: scale(1);
-    }
-
     .help > .split > div {
         width: 100%;
     }
@@ -306,52 +462,9 @@ b {
         padding-bottom: 10px;
     }
 
-    cite, blockquote {
-        font-size: 2em;
-        line-height: 1.5;
-    }
 }
 
 @media (max-width: 600px) {
-    .centered-text {
-        transform: scale(1);
-    }
-
-    .centered-text .title-separator {
-        display: block;
-    }
-
-    .centered-text > h1 {
-        font-size: 5em;
-    }
-
-    h2 {
-        font-size: 2.5em;
-    }
-
-    p {
-        font-size: 1.4em;
-    }
-
-    .centered-text > p {
-        font-size: 2em;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .about-us > p {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-    .socials > .split {
-        display: block;
-    }
-
-    .socials > .split > img {
-        width: 100%;
-    }
-
     .help > .split > div:first-child {
         padding-left: 20px;
         padding-right: 10px;
@@ -365,85 +478,7 @@ b {
 
 } 
 
-footer {
-    background-color: #add8e6;
-    padding: 3%;
-}
-
-footer > h3 {
-    font-size: 2em;
-}
-
 </style>
-
-<script setup>
-
-function open(link) {
-    window.open(link, "_blank")
-}
-
-</script>
-
-<div class="background-container">
-    <div class="centered-text">
-        <h1>Обирай <br class="title-separator"> Життя</h1>
-        <p>Християнський центр ресоціалізації</p>
-    </div>
-</div>
-
-<div class="about-us">
-    <h2>Про нас</h2>
-    <p>Ми - Християни. Починаючи з 2017 року ми служимо для нарко- та алко- залежним, щоб Сам Бог - Ісус Христос звільнив від тяжких залежностей. Курс реабілітації - безкоштовний, під час якого ви зможете дізнитися про Бога і побудувати з ним відносини. Це найкраща дорога, щоб отримати свободу від наркотиків, алкоголю, тютюну і інших залежностей. В центр ресоціалізації приймаємо кожного, хто хоче стати вільним і розірвати коло залежності. Свобода може настати лише, під проявом вашого особистого рішення прийняти допомогу Бога. </p>
-</div>
-
-<div class="ministry w-100">
-    <img class="ministry-back" src="/back-our-work.jpg">
-    <h2 class="c-w">Наше служіння</h2>
-    <div class="card">
-        <img src="/ministry-1.jpg">
-        <div class="card-text">
-            <h3>Звістка Євангелії</h3>
-            <h4>Наша ціль звістити Божу вістку спасіння у Ісусі Христі.</h4>
-        </div>
-    </div>
-    <div class="card">
-        <img src="/ministry-2.jpg">
-        <div class="card-text">
-            <h3>Допомога залежним</h3>
-            <h4>Допомога алко-, нарко- залежним та людям з іншими залежностями.</h4>
-        </div>
-    </div>
-    <div class="card">
-        <img src="/ministry-3.jpg">
-        <div class="card-text">
-            <h3>Консультація рідних</h3>
-            <h4>Маємо зв'язок з рідними та близькими залежних.</h4>
-        </div>
-    </div>
-    <div class="card">
-        <img src="/ministry-4.jpg">
-        <div class="card-text">
-            <h3>Дім милосердя</h3>
-            <h4>Допомога літнім людям, які потрапили в складні життеві ситуації.</h4>
-        </div>
-    </div>
-</div>
-
-<div class="split">
-    <div class="contacts">
-        <h2>Наші контакти</h2>
-        <p>Номер телефону: <b>+380969636242</b> Томін Олексій</p>
-        <p>Email: <b>life.choose2023@gmail.com</b></p>
-        <p>Адрес: <b>Україна, 62014, Харківська обл, Богодухівський р-н, село Пархомівка, вул Малиша Івана, будинок 99</b></p>
-    </div>
-    <div class="socials">
-        <h2>Ми в соціальних мережах</h2>
-        <div class="split">
-            <img src="/phone.png" @click="open('https://www.instagram.com/obyraj_zhyttya_')">
-            <img src="/laptop.png" @click="open('https://www.facebook.com/people/%D0%9E%D0%B1%D0%B8%D1%80%D0%B0%D0%B9-%D0%96%D0%B8%D1%82%D1%82%D1%8F/pfbid028MSgmNJeeZuGTibMGchTfCeqPKUeDwJ77XTocE91Z3Vsk4kYLQB33iWraWfwRprKl/')" >
-        </div>
-    </div>
-</div>
 
 <div class="help">
     <h2>Підтримати нас</h2>
@@ -465,6 +500,21 @@ function open(link) {
         </div>
     </div>
 </div>
+
+<!-- Footer -->
+
+<style>
+
+footer {
+    background-color: #add8e6;
+    padding: 3%;
+}
+
+footer > h3 {
+    font-size: 2em;
+}
+
+</style>
 
 <br>
 
