@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "./icon.png",
+    logo: "./favicon.png",
     nav: [
       //{ text: 'Home', link: '/' },
       //{ text: 'Examples', link: '/markdown-examples' }
