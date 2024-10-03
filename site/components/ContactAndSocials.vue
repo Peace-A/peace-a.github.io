@@ -1,5 +1,7 @@
 <script setup>
 
+import Split from "./Split.vue"
+
 // open page in new tab
 function open(link) {
     window.open(link, "_blank")
@@ -8,7 +10,7 @@ function open(link) {
 </script>
 
 <template>
-  <div class="split">
+  <Split>
       <div class="contacts">
           <h2>Наші контакти</h2>
           <p>Номер телефону: <b>+380969636242</b> Томін Олексій</p>
@@ -17,12 +19,12 @@ function open(link) {
       </div>
       <div class="socials">
           <h2>Ми в соціальних мережах</h2>
-          <div class="split">
+          <Split class="socials-split">
               <img src="/phone.png" @click="open('https://www.instagram.com/obyraj_zhyttya_')">
               <img src="/laptop.png" @click="open('https://www.facebook.com/people/%D0%9E%D0%B1%D0%B8%D1%80%D0%B0%D0%B9-%D0%96%D0%B8%D1%82%D1%82%D1%8F/pfbid028MSgmNJeeZuGTibMGchTfCeqPKUeDwJ77XTocE91Z3Vsk4kYLQB33iWraWfwRprKl/')" >
-          </div>
+          </Split>
       </div>
-  </div>
+  </Split>
 </template>
 
 <style>
@@ -41,12 +43,12 @@ function open(link) {
     margin-bottom: 50px;
 }
 
-.socials > .split {
+.socials-split {
     padding-left: 100px;
     padding-right: 100px;
 }
 
-.socials > .split > img {
+.socials-split > img {
     width: 50%;
     padding: 20px;
     object-fit: contain;
@@ -54,35 +56,35 @@ function open(link) {
     cursor: pointer;
 }
 
-.socials > .split > img:hover {
+.socials-split > img:hover {
     transform: scale(1.1);
 }
 
-.socials > .split > img:first-child {
+.socials-split > img:first-child {
     transform: scale(0.7);
 }
 
-.socials > .split > img:hover:first-child {
+.socials-split > img:hover:first-child {
     transform: scale(0.8);
 }
 
 @media (max-width: 1500px) {
-    .socials > .split {
+    .socials-split {
         display: flex;
     }
 
-    .socials > .split > img:first-child {
+    .socials-split > img:first-child {
         transform: scale(1);
     }
 
 }
 
 @media (max-width: 600px) {
-    .socials > .split {
+    .socials-split {
         display: block;
     }
 
-    .socials > .split > img {
+    .socials-split > img {
         width: 100%;
     }
 

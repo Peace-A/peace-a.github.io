@@ -126,25 +126,6 @@ b {
     color: white;
 }
 
-.split {
-    display: flex;
-}
-
-.split > * {
-    width: 100%;
-}
-
-@media (max-width: 1500px) {
-    .split {
-        display: block;
-    }
-    
-    .split > * {
-        width: 100%;
-        margin-top: 50px;
-    }
-}
-
 /* --- */
 
 </style>
