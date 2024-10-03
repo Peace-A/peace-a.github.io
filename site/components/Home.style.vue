@@ -130,6 +130,10 @@ b {
     display: flex;
 }
 
+.split > * {
+    width: 100%;
+}
+
 @media (max-width: 1500px) {
     .split {
         display: block;

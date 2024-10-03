@@ -54,11 +54,11 @@
     }
 
     .centered-text > p {
-        font-size: 1.2em;
+        font-size: 1.3em;
         margin-left: 0;
         margin-right: 0;
 
-        /* BUG: for some reason <p> in not in the center but some placed right so move it some left */
+        /* TODO: has bug because for some reason <p> in not in the center but some placed right so move it some left */
         padding-right: 15px; 
     }
 }

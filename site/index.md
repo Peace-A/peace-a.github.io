@@ -15,10 +15,13 @@ import Footer from "./components/Footer.vue"
 
 </script>
 
+<HomeStyle />
+
 <HomeHeader />
 <AboutUs />
 <Ministry />
 <ContactAndSocials />
+<br>
 <Donation />
 <br>
 <Footer />

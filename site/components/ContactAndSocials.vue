@@ -27,8 +27,9 @@ function open(link) {
 
 <style>
 
-.contacts, .socials {
-    width: 50%;
+.contacts {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .contacts > p {
