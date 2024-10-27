@@ -8,10 +8,10 @@ import Card from "./Card.vue"
   <div class="ministry w-100">
       <img class="ministry-back" src="/back-our-work.jpg">
       <h2 class="c-w">Наше служіння</h2>
-      <Card img="/chooselife/ministry-1.jpg" title="Звістка Євангелії" decription="Наша ціль звістити Божу вістку спасіння у Ісусі Христі." />
-      <Card img="/chooselife/ministry-2.jpg" title="Допомога залежним" decription="Допомога алко-, нарко- залежним та людям з іншими залежностями." />
-      <Card img="/chooselife/ministry-3.jpg" title="Консультація рідних" decription="Допомога алко-, нарко- залежним та людям з іншими залежностями." />
-      <Card img="/chooselife/ministry-4.jpg" title="Дім милосердя" decription="Допомога літнім людям, які потрапили в складні життеві ситуації." />
+      <Card img="/ministry-1.jpg" title="Звістка Євангелії" decription="Наша ціль звістити Божу вістку спасіння у Ісусі Христі." />
+      <Card img="/ministry-2.jpg" title="Допомога залежним" decription="Допомога алко-, нарко- залежним та людям з іншими залежностями." />
+      <Card img="/ministry-3.jpg" title="Консультація рідних" decription="Допомога алко-, нарко- залежним та людям з іншими залежностями." />
+      <Card img="/ministry-4.jpg" title="Дім милосердя" decription="Допомога літнім людям, які потрапили в складні життеві ситуації." />
   </div>
 </template>
 
