@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Обирай життя",
   description: "Christian website",
-  base: "/chooselife/",
   head: [
     ['link', { rel: 'icon', href: './favicon.png'} ]
   ],
