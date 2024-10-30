@@ -2,7 +2,7 @@
   <div class="background-container">
       <div class="centered-text">
           <h1>Обирай <br class="title-separator"> Життя</h1>
-          <p>Християнський центр ресоціалізації</p>
+          <p>Християнський центр <br class="title-separator"> ресоціалізації</p>
       </div>
   </div>
 </template>
@@ -39,7 +39,7 @@
     font-size: 1.3em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .centered-text {
         transform: scale(1);
