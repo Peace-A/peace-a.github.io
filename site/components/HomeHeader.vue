@@ -34,7 +34,7 @@
 
 .centered-text > p {
     font-family: M;
-    margin-top: 10px;
+    margin-top: 10px !important;
     text-align: center;
     font-size: 1.3em;
 }

@@ -44,11 +44,22 @@ p, h1, h2, h3, h4, cite, blockquote {
 }
 
 h1 {
-    font-size: 3em; /* Adjust font size as needed */
+    font-size: 3em !important; /* Adjust font size as needed */
     text-align: center;
-    font-weight: bold; /* Optional: makes the text bold */
+    font-weight: bold !important; /* Optional: makes the text bold */
     font-family: "Yong Serif";
-    line-height: 1;
+    line-height: 1 !important;
+}
+
+h2 {
+    font-size: 3em !important; /* Adjust font size as needed */
+    text-align: center;
+    font-weight: bold !important; /* Optional: makes the text bold */
+    line-height: 1 !important;
+}
+
+h4 {
+    font-size: 1.5em !important;
 }
 
 h2, h3, h4 {
@@ -69,7 +80,7 @@ h4 {
 
 p {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 40px !important;
     margin-left: 10px;
     margin-right: 10px;
     font-size: 1.5em;
