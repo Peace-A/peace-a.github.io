@@ -5,7 +5,7 @@ export default defineConfig({
   title: "Обирай життя",
   description: "Christian website",
   head: [
-    ['link', { rel: 'icon', href: './favicon-dark.png'} ]
+    ['link', { rel: 'icon', href: './favicon-light.png'} ]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
